@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="jquery-glitch.css" rel="stylesheet">
+
+    <title>Animation - jquery </title>
+</head>
+<body style="background-image: url('bg.jpg');background-position: top">
+
+<div class="container">
+    <canvas id="myCanvas" width="900" height="900"></canvas>
+    <canvas id="myCanvas1" width="860" height="860"></canvas>
+    <canvas id="myCanvas2" width="820" height="820"></canvas>
+    <div class="glitch gl">
+        <h1><span style="display: block;margin: 0 auto; width: 700px;">ENTERPRISE SCALE APPLICATIONS</span></h1>
+       <!-- <p>Vestibulum id ligula porstyta felis euismod semper. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consecteur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>-->
+        </div>
+    <div style="position: absolute;z-index: 0;margin-bottom: 20%;bottom: 0;top:0;right: 0;left:0;background-color: transparent; width: 1000px ;margin: 0 auto ">
+        <span class="element" style="width:700px;height:100px;margin: 0 auto; position: absolute;top:0;bottom: 0;right: 0;left: 0;background-color: transparent;margin-top: 54%;font-size: 16px    ;">
+
+            </span>
+        </div>
+</div>
+</div>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="jquery-glitch.js"></script>
+<script type="text/javascript" src="typed.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".glitch").glitch({
+            layers: ["red", "green"],
+            offset: [20, 10],
+        });
+
+
+        //animation of circle
+
+        setInterval(function () {
+            curPerc = 0;
+            animate();
+
+
+
+        },1000); setInterval(function () {
+
+            curPerc1 = -80;
+            animate1();
+
+
+
+        },1200);
+        setInterval(function () {
+
+            curPerc2 = 0;
+            animate2();
+
+
+        },1400);
+
+        setTimeout(function () {
+
+            //$('.gl').removeClass('glitch');
+            //$('.gl').empty();
+            $('#myCanvas').remove();
+            $('#myCanvas1').remove();
+            $('#myCanvas2').remove();
+            $(".element").css("background-color",'white');
+            $(".element").typed({
+                strings: ["Getting customers to your site can sometimes feel like being alone on a deserted planet. You’ve built a great business, but people seem to be flying by without noticing. You need a way to convert more leads and grow faster. You need to be noticed. Well, here’s how Landing Lion can help."],
+                typeSpeed: 0
+            });
+
+        },10000);
+
+    });
+
+
+
+
+
+    // requestAnimationFrame Shim
+    (function() {
+        var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        window.requestAnimationFrame = requestAnimationFrame;
+    })();
+
+
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    var x = canvas.width / 2;
+    var y = canvas.height / 2;
+    var radius = 445;
+    var endPercent = 110;
+    var curPerc = 0;
+    var counterClockwise = false;
+    var circ = Math.PI * 2;
+    var quart = Math.PI / 2;
+
+    context.lineWidth = 10;
+    context.strokeStyle = '#ad2323';
+    context.shadowOffsetX = 0;
+    context.shadowOffsetY = 0;
+    context.shadowBlur = 10;
+    context.shadowColor = '#656565';
+
+
+    function animate(current) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.beginPath();
+        context.arc(x, y, radius, -(quart), ((circ) * current) - quart, false);
+        context.stroke();
+        curPerc++;
+        if (curPerc < endPercent) {
+            requestAnimationFrame(function () {
+                animate(curPerc / 100)
+            });
+        }
+    }
+
+    animate();
+
+
+
+    var canvas1= document.getElementById('myCanvas1');
+    var context1 = canvas1.getContext('2d');
+    var x1 = canvas1.width / 2;
+    var y1 = canvas1.height / 2;
+    var radius1 = 420;
+    var endPercent1 = 95;
+    var curPerc1 = 0
+    var counterClockwis1 = false;
+    var circ1 = Math.PI * 2;
+    var quart1 = Math.PI / 2;
+
+    context1.lineWidth = 10;
+    context1.strokeStyle = '#ad2323';
+    context1.shadowOffsetX = 0;
+    context1.shadowOffsetY = 0;
+    context1.shadowBlur = 10;
+    context1.shadowColor = '#656565';
+
+
+    function animate1(current1) {
+        context1.clearRect(0, 0, canvas1.width, canvas1.height);
+        context1.beginPath();
+        context1.arc(x1, y1, radius1, -(quart1), ((circ1) * current1) - quart1, false);
+        context1.stroke();
+        curPerc1++;
+        if (curPerc1 < endPercent1) {
+            requestAnimationFrame(function () {
+                animate1(curPerc1 / 100)
+            });
+        }
+    }
+
+    animate1();
+
+
+ var canvas2= document.getElementById('myCanvas2');
+    var context2 = canvas2.getContext('2d');
+    var x2 = canvas2.width / 2;
+    var y2 = canvas2.height / 2;
+    var radius2 = 390;
+    var endPercent2 = 90;
+    var curPerc2 = 0
+    var counterClockwis2 = false;
+    var circ2 = Math.PI * 2;
+    var quart2 = Math.PI / 2;
+
+    context2.lineWidth = 10;
+    context2.strokeStyle = '#ad2323';
+    context2.shadowOffsetX = 0;
+    context2.shadowOffsetY = 0;
+    context2.shadowBlur = 10;
+    context2.shadowColor = '#656565';
+
+
+    function animate2(current2) {
+        context2.clearRect(0, 0, canvas2.width, canvas2.height);
+        context2.beginPath();
+        context2.arc(x2, y2, radius2, -(quart2), ((circ2) * current2) - quart2, false);
+        context2.stroke();
+        curPerc2++;
+        if (curPerc2 < endPercent2) {
+            requestAnimationFrame(function () {
+                animate2(curPerc2 / 100)
+            });
+        }
+    }
+
+    animate2();
+
+
+
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,90 @@
+.glitch {
+	width: 800px;
+	height: 800px;
+	background-color: transparent;
+
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	margin: auto;
+	-moz-border-radius: 400px;
+	-webkit-border-radius: 400px;
+	border-radius: 400px;
+	font-size: 18px;
+}
+.body{
+	background-color: white !important;
+}
+#myCanvas{
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin: auto;
+
+}
+#myCanvas1{
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
+	margin: auto;
+
+}
+#myCanvas2{
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	margin: auto;
+
+}
+.glitch .layer {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+}
+.glitch .display {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.glitch h1{
+	width:800px;
+	margin: 0 auto;
+	position: relative !important;
+	padding-top: 45%;
+}
+
+
+.typed-cursor{
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-moz-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
