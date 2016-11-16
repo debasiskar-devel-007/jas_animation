@@ -13,7 +13,7 @@
 	-moz-border-radius: 400px;
 	-webkit-border-radius: 400px;
 	border-radius: 400px;
-	font-size: 18px;
+	font-size: 22px;
 }
 .body{
 	background-color: white !important; margin: 0!important; padding: 0!important;
@@ -63,7 +63,7 @@
 	width:800px;
 	margin: 0 auto;
 	position: relative !important;
-	padding-top: 45%;
+	padding-top: 45%; text-shadow: 0 0 10px #f95a6c; font-family: 'Open Sans';  font-weight: 700;
 }
 
 
@@ -92,4 +92,11 @@
 
 /*------------------------------amitava css-----------------*/
 
-.containerpart1{ background: url("bg_img1.jpg") no-repeat center top; height: 2801px; background-size: 100%;}
+
+
+
+.part1bg{ width: 100%;}
+
+.containerpart1wrapper{ position: absolute; width: 100%; left: 0; top: 0; padding-top: 920px;}
+
+.element{   font-family: 'Open Sans';  font-weight: 700; font-size: 14px; color: #000; line-height: 20px;  text-shadow: 0 0 5px #f95a6c;}

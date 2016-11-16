@@ -4,24 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto" rel="stylesheet">
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link href="jquery-glitch.css" rel="stylesheet">
 
     <title>Animation - jquery </title>
 </head>
 <body style="margin: 0px; padding: 0px;">
-
 <div class="container containerpart1">
+
+    <img src="bg_img1.jpg" alt="#" class="part1bg">
+<div class=" containerpart1wrapper">
+
+
     <canvas id="myCanvas" width="900" height="900"></canvas>
     <canvas id="myCanvas1" width="860" height="860"></canvas>
     <canvas id="myCanvas2" width="820" height="820"></canvas>
     <div class="glitch gl">
-        <h1><span style="display: block;margin: 0 auto; width: 700px;">ENTERPRISE SCALE APPLICATIONS</span></h1>
+        <h1><span style="display: block;margin: 0 auto; width: 800px;">ENTERPRISE SCALE APPLICATIONS</span></h1>
        <!-- <p>Vestibulum id ligula porstyta felis euismod semper. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consecteur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>-->
         </div>
-    <div style="position: absolute;z-index: 0;margin-bottom: 20%;bottom: 0;top:0;right: 0;left:0;background-color: transparent; width: 1000px ;margin: 0 auto ">
-        <span class="element" style="width:700px;height:100px;margin: 0 auto; position: absolute;top:0;bottom: 0;right: 0;left: 0;background-color: transparent;margin-top: 54%;font-size: 16px    ;">
+    <div style="position: absolute;z-index: 0; bottom: 0;top:0;right: 0;left:0;background-color: transparent; width: 1000px ;margin: 0 auto ">
+        <span class="element" style=" padding: 10px; width:700px;height:100px;margin: 0 auto; position: absolute;top:0;bottom: 0;right: 0;left: 0;background-color: transparent;margin-top: 54%;font-size: 16px    ;">
 
             </span>
         </div>
@@ -33,8 +38,8 @@
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         $(".glitch").glitch({
-            layers: ["red", "green"],
-            offset: [20, 10],
+            layers: ["#ac2471", "#1cccd2" ],
+            offset: [50, 50],
         });
 
 
@@ -69,7 +74,11 @@
             $('#myCanvas').remove();
             $('#myCanvas1').remove();
             $('#myCanvas2').remove();
-            $(".element").css("background-color",'white');
+            $(".element").css("background-color",'#efd2e7');
+            $(".element").css("opacity",'0.9');
+            $(".element").css("border",'solid 1px #f95a6c');
+            $(".element").css("box-shadow",'0 0 10px #f95a6c');
+            $(".element").css("box-shadow",'0 0 10px #f95a6c inset');
             $(".element").typed({
                 strings: ["Getting customers to your site can sometimes feel like being alone on a deserted planet. You’ve built a great business, but people seem to be flying by without noticing. You need a way to convert more leads and grow faster. You need to be noticed. Well, here’s how Landing Lion can help."],
                 typeSpeed: 0
@@ -103,11 +112,11 @@
     var quart = Math.PI / 2;
 
     context.lineWidth = 10;
-    context.strokeStyle = '#ad2323';
+    context.strokeStyle = '#bf0534';
     context.shadowOffsetX = 0;
     context.shadowOffsetY = 0;
     context.shadowBlur = 10;
-    context.shadowColor = '#656565';
+    context.shadowColor = '#ff8ba7';
 
 
     function animate(current) {
@@ -139,11 +148,11 @@
     var quart1 = Math.PI / 2;
 
     context1.lineWidth = 10;
-    context1.strokeStyle = '#ad2323';
+    context1.strokeStyle = '#bf0534';
     context1.shadowOffsetX = 0;
     context1.shadowOffsetY = 0;
     context1.shadowBlur = 10;
-    context1.shadowColor = '#656565';
+    context1.shadowColor = '#ff8ba7';
 
 
     function animate1(current1) {
@@ -174,11 +183,11 @@
     var quart2 = Math.PI / 2;
 
     context2.lineWidth = 10;
-    context2.strokeStyle = '#ad2323';
+    context2.strokeStyle = '#bf0534';
     context2.shadowOffsetX = 0;
     context2.shadowOffsetY = 0;
     context2.shadowBlur = 10;
-    context2.shadowColor = '#656565';
+    context2.shadowColor = '#ff8ba7';
 
 
     function animate2(current2) {
